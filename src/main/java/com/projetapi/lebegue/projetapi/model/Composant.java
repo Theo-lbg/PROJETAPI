@@ -19,7 +19,6 @@ public class Composant {
         this.image = image;
     }
 
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

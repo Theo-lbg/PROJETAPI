@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 @RestController
 public class ComposantController {
@@ -16,13 +17,18 @@ public class ComposantController {
         return composantService.findAll();
     }
 
+    @GetMapping("/composant/{nom}")
+    public Composant getComposantDetails(@PathVariable(name = "name") String nom) throws ExecutionException, InterruptedException {
+        return composantService.getComposantDetails(nom);
+    }
+
     @GetMapping("/composant/{id}")
     public Composant findById(@PathVariable(name = "id") String id){
         return composantService.findById(id);
     }
 
     @PostMapping("/add")
-    public void createComposant(@RequestBody Composant composant){
+    public void createComposant(@RequestBody Composant composant) throws ExecutionException, InterruptedException {
         composantService.createComposant(composant);
     }
 

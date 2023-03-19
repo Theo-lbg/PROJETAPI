@@ -1,15 +1,24 @@
 package com.projetapi.lebegue.projetapi.services.impl;
 
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.WriteResult;
+import com.google.firebase.cloud.FirestoreClient;
 import com.projetapi.lebegue.projetapi.model.Composant;
 import com.projetapi.lebegue.projetapi.services.ComposantService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 @Service
 @Slf4j
 public class ComposantSerivceImpl implements ComposantService {
+
+    public static final String COLLECTION_NAME = "composants";
 
     @Override
     public ArrayList<Composant> findAll() {
@@ -48,11 +57,37 @@ public class ComposantSerivceImpl implements ComposantService {
 
     @Override
     public void deleteComposantById(String id) {
-        log.info("Id of the deleting composant is {}", id);
+
+
     }
 
     @Override
-    public void createComposant(Composant composant) {
-
+    public String createComposant(Composant composant) throws ExecutionException, InterruptedException {
+        Firestore dbFirestore = FirestoreClient.getFirestore();
+        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection(COLLECTION_NAME).document(Composant.getNom()).set(composant);
+        return collectionsApiFuture.get().getUpdateTime().toString();
     }
+
+    @Override
+    public Composant getComposantDetails(String composant) throws ExecutionException, InterruptedException {
+        Firestore dbFirestore = FirestoreClient.getFirestore();
+
+        DocumentReference documentReference = dbFirestore.collection(COLLECTION_NAME).document(composant);
+
+        ApiFuture<DocumentSnapshot> future = documentReference.get();
+
+        DocumentSnapshot document = future.get();
+
+        Composant composant1 = null;
+
+        if(document.exists()) {
+            composant1 = document.toObject(Composant.class);
+            return composant1;
+        }else {
+            return null;
+        }
+    }
+
+
 }
+

@@ -16,7 +16,7 @@ public class FBInitialize {
         try {
 
             FileInputStream serviceAccount =
-                    new FileInputStream("C://Users//theol//PROJETAPI//fir-auth-7d4e5-firebase-adminsdk-1s9k6-66b8f8072d.json");
+                    new FileInputStream("./fir-auth-7d4e5-firebase-adminsdk-1s9k6-66b8f8072d.json");
 
             FirebaseOptions options = new FirebaseOptions.Builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))

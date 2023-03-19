@@ -2,7 +2,7 @@ package com.projetapi.lebegue.projetapi.model;
 
 public class Composant {
     private String id;
-    private String nom;
+    private static String nom;
     private String marque;
     private String type;
     private String description;
@@ -27,7 +27,7 @@ public class Composant {
         this.id = id;
     }
 
-    public String getNom() {
+    public static String getNom() {
         return nom;
     }
 

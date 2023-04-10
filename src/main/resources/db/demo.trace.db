@@ -7911,6 +7911,9 @@ org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQ
 Syntax error in SQL statement "[*]BOITIERS_PC"; expected "BACKUP, BEGIN"; SQL statement:
 BOITIERS_PC [42001-214]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6d2e2ed (adding modif)
 2023-04-10 21:48:36 jdbc[45]: null
 org.h2.message.DbException: La connexion n'a pas été fermée et a été récupérée par le ramasse miette.
 The connection was not closed by the application and is garbage collected [90018-214]
@@ -7935,6 +7938,7 @@ The connection was not closed by the application and is garbage collected [90018
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	... 16 more
+<<<<<<< HEAD
 2023-04-10 22:17:20 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPOSANTS" non trouvée
 Table "COMPOSANTS" not found; SQL statement:
@@ -8142,3 +8146,5 @@ Syntax error in SQL statement "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTAT
 SELECT * FROM VENTILATEURS VENTIRADS ALIMENTATIONS [42000-214]
 =======
 >>>>>>> 3d44a9f (feat(bddsql): adding bdd.sql with requests)
+=======
+>>>>>>> 6d2e2ed (adding modif)

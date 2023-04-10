@@ -1,15 +1,14 @@
 package com.projetapi.lebegue.projetapi.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
-@Table(name = "composant")
+@Table(name = "cartes_meres")
 @Entity
-public class Composant {
+public class cartes_meres {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -17,12 +16,14 @@ public class Composant {
     private String id;
     private String nom;
     private String marque;
-    private String type;
+    private String socket;
+    private String format;
+    private String chipset;
+    private String ram_max;
     private String description;
     private String prix;
     private String image;
 
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -47,12 +48,36 @@ public class Composant {
         this.marque = marque;
     }
 
-    public String getType() {
-        return type;
+    public String getSocket() {
+        return socket;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setSocket(String socket) {
+        this.socket = socket;
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public String getChipset() {
+        return chipset;
+    }
+
+    public void setChipset(String chipset) {
+        this.chipset = chipset;
+    }
+
+    public String getRam_max() {
+        return ram_max;
+    }
+
+    public void setRam_max(String ram_max) {
+        this.ram_max = ram_max;
     }
 
     public String getDescription() {
@@ -79,9 +104,4 @@ public class Composant {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
-    }
 }

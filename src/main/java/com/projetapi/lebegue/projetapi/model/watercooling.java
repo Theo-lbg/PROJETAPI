@@ -1,28 +1,23 @@
 package com.projetapi.lebegue.projetapi.model;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-@Table(name = "composant")
+@Table(name = "watercooling")
 @Entity
-public class Composant {
-
+public class watercooling {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
+    private String socket_compatible;
     private String type;
     private String description;
     private String prix;
     private String image;
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -45,6 +40,14 @@ public class Composant {
 
     public void setMarque(String marque) {
         this.marque = marque;
+    }
+
+    public String getSocket_compatible() {
+        return socket_compatible;
+    }
+
+    public void setSocket_compatible(String socket_compatible) {
+        this.socket_compatible = socket_compatible;
     }
 
     public String getType() {
@@ -79,9 +82,4 @@ public class Composant {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
-    }
 }

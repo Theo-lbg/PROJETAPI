@@ -1,28 +1,24 @@
 package com.projetapi.lebegue.projetapi.model;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-@Table(name = "composant")
+@Table(name = "alimentations")
 @Entity
-public class Composant {
-
+public class alimentations {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
-    private String type;
+    private String puissance;
+    private String modulaire;
+    private String efficacite;
     private String description;
     private String prix;
     private String image;
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -47,12 +43,28 @@ public class Composant {
         this.marque = marque;
     }
 
-    public String getType() {
-        return type;
+    public String getPuissance() {
+        return puissance;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPuissance(String puissance) {
+        this.puissance = puissance;
+    }
+
+    public String getModulaire() {
+        return modulaire;
+    }
+
+    public void setModulaire(String modulaire) {
+        this.modulaire = modulaire;
+    }
+
+    public String getEfficacite() {
+        return efficacite;
+    }
+
+    public void setEfficacite(String efficacite) {
+        this.efficacite = efficacite;
     }
 
     public String getDescription() {
@@ -79,9 +91,4 @@ public class Composant {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
-    }
 }

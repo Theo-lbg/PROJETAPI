@@ -1,15 +1,13 @@
 package com.projetapi.lebegue.projetapi.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-@Table(name = "composant")
+@Table(name = "cartes_graphique")
 @Entity
-public class Composant {
+public class cartes_graphique {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -17,12 +15,12 @@ public class Composant {
     private String id;
     private String nom;
     private String marque;
-    private String type;
+    private String chipset;
+    private String vram;
+    private String frequence;
     private String description;
     private String prix;
     private String image;
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -47,12 +45,28 @@ public class Composant {
         this.marque = marque;
     }
 
-    public String getType() {
-        return type;
+    public String getChipset() {
+        return chipset;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setChipset(String chipset) {
+        this.chipset = chipset;
+    }
+
+    public String getVram() {
+        return vram;
+    }
+
+    public void setVram(String vram) {
+        this.vram = vram;
+    }
+
+    public String getFrequence() {
+        return frequence;
+    }
+
+    public void setFrequence(String frequence) {
+        this.frequence = frequence;
     }
 
     public String getDescription() {
@@ -77,11 +91,5 @@ public class Composant {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
     }
 }

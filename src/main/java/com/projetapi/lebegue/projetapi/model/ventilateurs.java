@@ -1,15 +1,14 @@
 package com.projetapi.lebegue.projetapi.model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
-@Table(name = "composant")
+@Table(name = "ventilateurs")
 @Entity
-public class Composant {
+public class ventilateurs {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -22,7 +21,6 @@ public class Composant {
     private String prix;
     private String image;
 
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -79,9 +77,4 @@ public class Composant {
         this.image = image;
     }
 
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
-    }
 }

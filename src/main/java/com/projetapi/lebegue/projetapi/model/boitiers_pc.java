@@ -1,28 +1,25 @@
 package com.projetapi.lebegue.projetapi.model;
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
-
-@Table(name = "composant")
+@Table(name = "boitiers_pc")
 @Entity
-public class Composant {
-
+public class boitiers_pc {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
+
     private String id;
     private String nom;
     private String marque;
+    private String format;
     private String type;
+    private String ventilateurs;
     private String description;
     private String prix;
     private String image;
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }
@@ -47,12 +44,28 @@ public class Composant {
         this.marque = marque;
     }
 
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getVentilateurs() {
+        return ventilateurs;
+    }
+
+    public void setVentilateurs(String ventilateurs) {
+        this.ventilateurs = ventilateurs;
     }
 
     public String getDescription() {
@@ -77,11 +90,5 @@ public class Composant {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    @Override
-    public String toString() {
-        return "Composant [description=" + description + ", id=" + id + ", image=" + image + ", marque=" + marque + ", nom="
-                + nom + ", prix=" + prix + ", type=" + type + "]";
     }
 }

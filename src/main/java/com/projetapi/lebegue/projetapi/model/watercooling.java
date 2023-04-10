@@ -1,6 +1,15 @@
 package com.projetapi.lebegue.projetapi.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+@Table(name = "watercooling")
+@Entity
 public class watercooling {
-
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
@@ -9,19 +18,6 @@ public class watercooling {
     private String description;
     private String prix;
     private String image;
-
-    public watercooling(String id, String nom, String marque, String socket_compatible, String type, String description, String prix, String image) {
-        this.id = id;
-        this.nom = nom;
-        this.marque = marque;
-        this.socket_compatible = socket_compatible;
-        this.type = type;
-        this.description = description;
-        this.prix = prix;
-        this.image = image;
-    }
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

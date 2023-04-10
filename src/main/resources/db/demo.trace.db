@@ -7934,3 +7934,208 @@ The connection was not closed by the application and is garbage collected [90018
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	... 16 more
+2023-04-10 22:17:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPOSANTS" non trouvée
+Table "COMPOSANTS" not found; SQL statement:
+INSERT INTO composants (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'), [42102-214]
+2023-04-10 22:17:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),[*]"; attendu "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"
+Syntax error in SQL statement "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'), [42001-214]
+2023-04-10 22:18:01 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPOSANTS" non trouvée
+Table "COMPOSANTS" not found; SQL statement:
+// fais pour composant
+INSERT INTO composants (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+
+INSERT INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)
+VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',
+        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),
+       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg') [42102-214]
+2023-04-10 22:18:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Colonne "IMAGE" non trouvée
+Column "IMAGE" not found; SQL statement:
+// fais pour composant
+INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+
+INSERT INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)
+VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',
+        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),
+       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg') [42122-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:749)
+	at org.h2.command.Parser.parseColumn(Parser.java:1256)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1241)
+	at org.h2.command.Parser.parseInsert(Parser.java:1641)
+	at org.h2.command.Parser.parsePrepared(Parser.java:814)
+	at org.h2.command.Parser.parse(Parser.java:689)
+	at org.h2.command.Parser.parse(Parser.java:661)
+	at org.h2.command.Parser.prepareCommand(Parser.java:569)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-04-10 22:18:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a\000d\000aINSERT [*]INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)\000d\000aVALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',\000d\000a        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),\000d\000a       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg')"
+Syntax error in SQL statement "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a\000d\000aINSERT [*]INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)\000d\000aVALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',\000d\000a        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),\000d\000a       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg')"; SQL statement:
+INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+
+INSERT INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)
+VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',
+        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),
+       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg') [42000-214]
+2023-04-10 22:18:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a\000d\000aINSERT [*]INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)\000d\000aVALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',\000d\000a        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),\000d\000a       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg')"
+Syntax error in SQL statement "INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)\000d\000aVALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,\000d\000a        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),\000d\000a       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,\000d\000a        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),\000d\000a       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,\000d\000a        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),\000d\000a       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,\000d\000a        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),\000d\000a       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,\000d\000a        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),\000d\000a       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a\000d\000aINSERT [*]INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)\000d\000aVALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',\000d\000a        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),\000d\000a       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,\000d\000a        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),\000d\000a       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',\000d\000a        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,\000d\000a        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg')"; SQL statement:
+INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+
+INSERT INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)
+VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',
+        'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg'),
+       (2, 'MSI B450 Tomahawk MAX', 'MSI', 'AM4', 'ATX', 'AMD B450', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png'),
+       (3, 'Gigabyte A520M DS3H', 'Gigabyte', 'AM4', 'Micro-ATX', 'AMD A520', '64 Go',
+        'Carte mère pour processeur AMD Ryzen, compatible avec les processeurs de 3ème génération', 69.99,
+        'https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg') [42000-214]
+2023-04-10 22:25:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"
+Syntax error in SQL statement "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"; SQL statement:
+SELECT * FROM VENTILATEURS VENTIRADS ALIMENTATIONS [42000-214]

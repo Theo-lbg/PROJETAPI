@@ -5,9 +5,9 @@ CREATE TABLE Composant
     id          INT PRIMARY KEY,
     nom         VARCHAR(255),
     marque      VARCHAR(255),
-    Type        VARCHAR(255),
     description VARCHAR(1000),
-    prix        INT not null
+    prix        INT not null,
+    image       VARCHAR(255)
 );
 
 CREATE TABLE cartes_meres
@@ -87,17 +87,6 @@ CREATE TABLE memoires_ram
     Type        VARCHAR(255),
     Fréquence   VARCHAR(255),
     Latence     VARCHAR(255),
-    Description TEXT not null,
-    Prix        DECIMAL(10, 2),
-    Image       VARCHAR(255)
-);
-
-CREATE TABLE ventilateurs
-(
-    ID          INT PRIMARY KEY,
-    Nom         VARCHAR(255),
-    Marque      VARCHAR(255),
-    Type        VARCHAR(255),
     Description TEXT not null,
     Prix        DECIMAL(10, 2),
     Image       VARCHAR(255)

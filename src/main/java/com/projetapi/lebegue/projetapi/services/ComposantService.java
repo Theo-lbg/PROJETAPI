@@ -6,5 +6,7 @@ import java.util.ArrayList;
 
 public interface ComposantService {
 
-    public ArrayList<Composant> findAll();
+    ArrayList<Composant> findAll();
+
+//    public String findById(String id);
 }

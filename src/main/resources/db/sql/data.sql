@@ -1,3 +1,18 @@
+-- For my tests table composant is not used
+INSERT INTO composant (ID, Nom, Marque, Description, Prix, Image)
+VALUES (1, 'Intel Core i9-11900K', 'Intel', 'Processeur Intel de 11ème génération, débloqué pour l''overclocking', 609.99,
+        'https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png'),
+       (2, 'AMD Ryzen 5 5600X', 'AMD', 'Processeur AMD Ryzen de 5ème génération, compatible PCIe 4.0', 319.99,
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61vGQNUEsGL._AC_SX450_.jpg'),
+       (3, 'Intel Pentium Gold G6400', 'Intel', 'Processeur Intel d''entrée de gamme, compatible avec les cartes mères LGA 1200', 79.99,
+        'https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg'),
+       (4, 'Corsair RM850x', 'Corsair', 'Alimentation modulaire 850 W, certifiée 80+ Gold pour une efficacité maximale', 149.99,
+        'https://www.corsair.com/corsairmedia/sys_master/productcontent/CP-9020180-NA-RM850x_PSU_01.png'),
+       (5, 'EVGA SuperNOVA 750 G5', 'EVGA', 'Alimentation de qualité supérieure avec une certification 80+ Gold pour une efficacité énergétique élevée et une modularité pour une installation facile', 129.99,
+        'https://www.evga.com/products/productimages/400-G5-0750-Y1_LG.png'),
+       (6, 'MSI B450 Tomahawk MAX', 'MSI', 'Carte mère pour processeur AMD Ryzen, compatible DDR4 jusqu''à 4133 MHz', 119.99,
+        'https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png');
+
 INSERT INTO cartes_meres (ID, Nom, Marque, Socket, Format, Chipset, RAM_Max, Description, Prix, Image)
 VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Intel Z590', '128 Go',
         'Carte mère pour processeur Intel de 10ème et 11ème génération, compatible Wi-Fi 6 et Bluetooth 5.2', 399.99,

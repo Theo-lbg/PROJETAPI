@@ -1,6 +1,16 @@
 package com.projetapi.lebegue.projetapi.model;
-public class ventirads {
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+@Table(name = "ventirads")
+@Entity
+public class ventirads {
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
@@ -10,20 +20,6 @@ public class ventirads {
     private String description;
     private String prix;
     private String image;
-
-    public ventirads(String id, String nom, String marque, String socket, String type, String niveau_bruit, String description, String prix, String image) {
-        this.id = id;
-        this.nom = nom;
-        this.marque = marque;
-        this.socket = socket;
-        this.type = type;
-        this.niveau_bruit = niveau_bruit;
-        this.description = description;
-        this.prix = prix;
-        this.image = image;
-    }
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

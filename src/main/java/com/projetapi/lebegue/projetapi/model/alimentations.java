@@ -1,6 +1,15 @@
 package com.projetapi.lebegue.projetapi.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+@Table(name = "alimentations")
+@Entity
 public class alimentations {
-
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
@@ -10,20 +19,6 @@ public class alimentations {
     private String description;
     private String prix;
     private String image;
-
-    public alimentations(String id, String nom, String marque, String puissance, String modulaire, String efficacite, String description, String prix, String image) {
-        this.id = id;
-        this.nom = nom;
-        this.marque = marque;
-        this.puissance = puissance;
-        this.modulaire = modulaire;
-        this.efficacite = efficacite;
-        this.description = description;
-        this.prix = prix;
-        this.image = image;
-    }
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

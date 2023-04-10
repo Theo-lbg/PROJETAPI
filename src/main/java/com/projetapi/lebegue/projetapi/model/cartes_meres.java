@@ -1,7 +1,18 @@
 package com.projetapi.lebegue.projetapi.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+@Table(name = "cartes_meres")
+@Entity
 public class cartes_meres {
 
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
@@ -13,20 +24,6 @@ public class cartes_meres {
     private String prix;
     private String image;
 
-    public cartes_meres(String id, String nom, String marque, String socket, String format, String chipset, String ram_max, String description, String prix, String image) {
-        this.id = id;
-        this.nom = nom;
-        this.marque = marque;
-        this.socket = socket;
-        this.format = format;
-        this.chipset = chipset;
-        this.ram_max = ram_max;
-        this.description = description;
-        this.prix = prix;
-        this.image = image;
-    }
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

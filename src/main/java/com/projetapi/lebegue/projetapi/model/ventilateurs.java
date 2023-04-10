@@ -1,13 +1,18 @@
 package com.projetapi.lebegue.projetapi.model;
-// ID          INT PRIMARY KEY,
-//    Nom         VARCHAR(255),
-//    Marque      VARCHAR(255),
-//    Type        VARCHAR(255),
-//    Description TEXT not null,
-//    Prix        DECIMAL(10, 2),
-//    Image       VARCHAR(255)
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+@Table(name = "ventilateurs")
+@Entity
 public class ventilateurs {
 
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String nom;
     private String marque;
@@ -16,17 +21,6 @@ public class ventilateurs {
     private String prix;
     private String image;
 
-    public ventilateurs(String id, String nom, String marque, String type, String description, String prix, String image) {
-        this.id = id;
-        this.nom = nom;
-        this.marque = marque;
-        this.type = type;
-        this.description = description;
-        this.prix = prix;
-        this.image = image;
-    }
-
-    // GETTER AND SETTER
     public String getId() {
         return id;
     }

@@ -7910,6 +7910,7 @@ VALUES (1, 'Corsair Hydro Series H150i', 'Corsair',
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "[*]BOITIERS_PC"; attendu "BACKUP, BEGIN"
 Syntax error in SQL statement "[*]BOITIERS_PC"; expected "BACKUP, BEGIN"; SQL statement:
 BOITIERS_PC [42001-214]
+<<<<<<< HEAD
 2023-04-10 21:48:36 jdbc[45]: null
 org.h2.message.DbException: La connexion n'a pas été fermée et a été récupérée par le ramasse miette.
 The connection was not closed by the application and is garbage collected [90018-214]
@@ -8139,3 +8140,5 @@ VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Inte
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"
 Syntax error in SQL statement "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"; SQL statement:
 SELECT * FROM VENTILATEURS VENTIRADS ALIMENTATIONS [42000-214]
+=======
+>>>>>>> 3d44a9f (feat(bddsql): adding bdd.sql with requests)

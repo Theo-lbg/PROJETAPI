@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.projetapi.lebegue.projetapi.ProjetapiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.368 s - in com.projetapi.lebegue.projetapi.ProjetapiApplicationTests

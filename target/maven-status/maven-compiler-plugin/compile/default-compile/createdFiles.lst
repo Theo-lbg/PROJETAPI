@@ -1,0 +1,6 @@
+com\projetapi\lebegue\projetapi\model\Composant.class
+com\projetapi\lebegue\projetapi\services\FBInitialize.class
+com\projetapi\lebegue\projetapi\rest\ComposantController.class
+com\projetapi\lebegue\projetapi\services\impl\ComposantSerivceImpl.class
+com\projetapi\lebegue\projetapi\services\ComposantService.class
+com\projetapi\lebegue\projetapi\ProjetapiApplication.class

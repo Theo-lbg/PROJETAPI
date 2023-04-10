@@ -7939,6 +7939,9 @@ The connection was not closed by the application and is garbage collected [90018
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
 	... 16 more
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4c5a46b (Adding a road to have the bdd in the list of h2 DB)
 2023-04-10 22:17:20 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMPOSANTS" non trouvée
 Table "COMPOSANTS" not found; SQL statement:
@@ -8144,7 +8147,10 @@ VALUES (1, 'Asus ROG Strix Z590-E Gaming WiFi', 'Asus', 'LGA 1200', 'ATX', 'Inte
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"
 Syntax error in SQL statement "SELECT * FROM VENTILATEURS VENTIRADS [*]ALIMENTATIONS"; SQL statement:
 SELECT * FROM VENTILATEURS VENTIRADS ALIMENTATIONS [42000-214]
+<<<<<<< HEAD
 =======
 >>>>>>> 3d44a9f (feat(bddsql): adding bdd.sql with requests)
 =======
 >>>>>>> 6d2e2ed (adding modif)
+=======
+>>>>>>> 4c5a46b (Adding a road to have the bdd in the list of h2 DB)

@@ -19,8 +19,8 @@ public class ComposantSerivceImpl implements ComposantService {
         return composants;
     }
 
-//    @Override
-//    public ComposantService findById(String id) {
-//        return composantService.findById(id).get();
-//    }
+    @Override
+    public Composant findById(String id) {
+        return compoRepository.findById(id).get();
+    }
 }

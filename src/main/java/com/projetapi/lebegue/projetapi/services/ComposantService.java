@@ -8,5 +8,5 @@ public interface ComposantService {
 
     ArrayList<Composant> findAll();
 
-//    public String findById(String id);
+    Composant findById(String id);
 }

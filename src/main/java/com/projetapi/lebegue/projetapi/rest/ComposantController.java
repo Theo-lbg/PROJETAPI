@@ -23,12 +23,14 @@ public class ComposantController {
         return (ArrayList<Composant>) composantRepository.findAll();
     }
 
+    @GetMapping("/composant/{id}")
+    public Composant findById(String id){
+        return composantRepository.findById(id).get();
+    }
+
     @GetMapping("/memoires_ram")
     public ArrayList<memoires_ram> findAllMemoires(){
         return (ArrayList<memoires_ram>) memoires_ramRepository.findAll();
     }
-//    public Composant findById(String id){
-//        return composantService.findById(id);
-//    }
 
 }

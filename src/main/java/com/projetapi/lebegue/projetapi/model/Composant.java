@@ -22,6 +22,16 @@ public class Composant {
     private String prix;
     private String image;
 
+    public Composant() {
+        this.id = id;
+        this.nom = nom;
+        this.marque = marque;
+        this.type = type;
+        this.description = description;
+        this.prix = prix;
+        this.image = image;
+    }
+
     // GETTER AND SETTER
     public String getId() {
         return id;

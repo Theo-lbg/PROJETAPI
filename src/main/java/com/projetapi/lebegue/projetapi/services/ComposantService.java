@@ -9,4 +9,7 @@ public interface ComposantService {
     ArrayList<Composant> findAll();
 
     Composant findById(String id);
+
+    String create(Composant composant);
+
 }

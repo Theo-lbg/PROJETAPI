@@ -373,3 +373,43 @@ VALUES (1, 'Nvidia GeForce RTX 3090', 'Nvidia', 'GA102', '24 Go GDDR6X', '1695 M
        (3, 'Nvidia GeForce GTX 1650 Super', 'Nvidia', 'TU116', '4 Go GDDR6', '1725 MHz',
         'Carte graphique d''entrée de gamme pour les jeux vidéo, offrant de bonnes performances à un prix abordable',
         189.99, 'https://images.nvidia.com/geforce-gtx/16-series/super/cards/GeForce_GTX_1650_Super_Gallery_Side.png') [42102-214]
+2023-04-12 22:18:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "create"
+Data conversion error converting "create"; SQL statement:
+select c1_0.id,c1_0.description,c1_0.image,c1_0.marque,c1_0.nom,c1_0.prix,c1_0.type from composant c1_0 where c1_0.id=? [22018-214]
+2023-04-12 22:20:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b88187771fdf0187772074470000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b88187771fdf0187772074470000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:20:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b88187771fdf018777209a3c0001' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b88187771fdf018777209a3c0001' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:21:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b88187771fdf01877720f6420002' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b88187771fdf01877720f6420002' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:21:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b88187771fdf01877721845c0003' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b88187771fdf01877721845c0003' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:22:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b881877722720187772290e60000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b881877722720187772290e60000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:22:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b8818777227201877722a6290001' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b8818777227201877722a6290001' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:23:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b881877722720187772341390002' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b881877722720187772341390002' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:23:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b88187772272018777235b970003' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b88187772272018777235b970003' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]
+2023-04-12 22:28:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'4028b8818777261c01877727ae720000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"
+Data conversion error converting "'4028b8818777261c01877727ae720000' (COMPOSANT: ""ID"" INTEGER NOT NULL)"; SQL statement:
+insert into composant (description, image, marque, nom, prix, type, id) values (?, ?, ?, ?, ?, ?, ?) [22018-214]

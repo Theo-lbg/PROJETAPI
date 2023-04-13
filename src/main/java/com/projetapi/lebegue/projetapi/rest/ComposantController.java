@@ -1,44 +1,44 @@
 package com.projetapi.lebegue.projetapi.rest;
 
-import com.projetapi.lebegue.projetapi.DAO.ComposantRepository;
-import com.projetapi.lebegue.projetapi.exceptions.RessourceNotFoundException;
-import com.projetapi.lebegue.projetapi.model.Composant;
-import com.projetapi.lebegue.projetapi.model.memoires_ram;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import com.projetapi.lebegue.projetapi.DAO.memoires_ramRepository;
+import java.util.List;
 
-import java.util.ArrayList;
+import com.projetapi.lebegue.projetapi.model.Composant;
+import com.projetapi.lebegue.projetapi.services.ComposantService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
+@RequestMapping("/composant")
 public class ComposantController {
 
     @Autowired
-    private ComposantRepository composantRepository;
-    @Autowired
-    private memoires_ramRepository memoires_ramRepository;
+    private ComposantService CompoService;
 
-    @GetMapping("/composant")
-    public ArrayList<Composant> findAll(){
-        return (ArrayList<Composant>) composantRepository.findAll();
+    @GetMapping
+    public List<Composant> findAll() {
+        return CompoService.findAll();
     }
 
-    @GetMapping("/composant/{id}")
-    public Composant findById(@PathVariable("id") String id){
-        Composant response = composantRepository.findById(id).get();
-        if (response == null) throw new RessourceNotFoundException();
-        return response;
+    @GetMapping("/{id}")
+    public Composant findById(@PathVariable("id") String identifiant) {
+        Composant reponse = CompoService.findById(identifiant);
+        if(reponse == null) {
+            throw new ResourceNotFoundException();
+        }
+        return reponse;
     }
 
-    @GetMapping("/memoires_ram")
-    public ArrayList<memoires_ram> findAllMemoires(){
-        return (ArrayList<memoires_ram>) memoires_ramRepository.findAll();
+    @PostMapping
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public String create(@RequestBody Composant composant) {
+        return CompoService.create(composant);
     }
-
-    @PostMapping("/composant/create")
-    @ResponseStatus(code = org.springframework.http.HttpStatus.CREATED)
-    public Composant create (@RequestBody Composant composant){
-        return composantRepository.save(composant);
-    }
-
 }

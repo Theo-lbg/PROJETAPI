@@ -1,18 +1,14 @@
 package com.projetapi.lebegue.projetapi.rest;
 
 import java.util.List;
+import java.util.Map;
 
 import com.projetapi.lebegue.projetapi.model.Composant;
 import com.projetapi.lebegue.projetapi.services.ComposantService;
+import com.projetapi.lebegue.projetapi.util.Control;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -30,9 +26,7 @@ public class ComposantController {
     @GetMapping("/{id}")
     public Composant findById(@PathVariable("id") String identifiant) {
         Composant reponse = CompoService.findById(identifiant);
-        if(reponse == null) {
-            throw new ResourceNotFoundException();
-        }
+        Control.checkFound(reponse);
         return reponse;
     }
 
@@ -40,5 +34,26 @@ public class ComposantController {
     @ResponseStatus(code = HttpStatus.CREATED)
     public String create(@RequestBody Composant composant) {
         return CompoService.create(composant);
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public void update (@PathVariable("id") String identifiant, @RequestBody Composant composant) {
+        Control.checkFound(CompoService.findById(identifiant));
+        CompoService.update(identifiant, composant);
+    }
+
+    @PatchMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public void partialUpdate (@PathVariable("id") String identifiant, @RequestBody Map<String, Object> updates) {
+        Control.checkFound(CompoService.findById(identifiant));
+        CompoService.partialUpdate(identifiant, updates);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public void deletebyID(@PathVariable("id") String identifiant) {
+        Control.checkFound(CompoService.findById(identifiant));
+        CompoService.delete(identifiant);
     }
 }

@@ -117,3 +117,21 @@
         Image       VARCHAR(255)
     );
 
+    CREATE TABLE Users (
+                           id INT PRIMARY KEY,
+                           nom VARCHAR(255),
+                           email VARCHAR(255),
+                           adresse VARCHAR(1000),
+                           code_postal VARCHAR(255),
+                           ville VARCHAR(255),
+                           pays VARCHAR(255),
+                           tel VARCHAR(255),
+                           date_creation TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE TABLE Panier (
+                            id INT PRIMARY KEY,
+                            user_id INT,
+                            date_creation TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                            FOREIGN KEY (user_id) REFERENCES Users(id)
+    );

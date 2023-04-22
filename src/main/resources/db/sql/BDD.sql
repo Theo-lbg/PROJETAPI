@@ -1,4 +1,4 @@
-    DROP TABLE IF EXISTS Composant, cartes_meres, processeurs, alimentations, ventirads, boitiers_pc, memoires_ram, ventilateurs, cartes_graphiques, watercooling, cartes_graphique;
+DROP TABLE IF EXISTS Composant, cartes_meres, processeurs, alimentations, ventirads, boitiers_pc, memoires_ram, ventilateurs, cartes_graphiques, watercooling, cartes_graphique;
 
     CREATE TABLE Composant
     (

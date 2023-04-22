@@ -1,9 +1,6 @@
 package com.projetapi.lebegue.projetapi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -29,6 +26,9 @@ public class Composant {
     public void setId(String id) {
         this.id = id;
     }
+
+    @ManyToOne
+    private Material material;
 
     public String getNom() {
         return nom;

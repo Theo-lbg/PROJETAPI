@@ -1,33 +1,59 @@
 package com.projetapi.lebegue.projetapi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Table(name = "composant")
 @Entity
 public class Composant {
-
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "compo_id")
+    private Integer compoId;
+
+    @Column(name = "nom")
     private String nom;
+
+    @Column(name = "marque")
     private String marque;
+
+    @Column(name = "type")
     private String type;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "prix")
     private String prix;
+
+    @Column(name = "image")
     private String image;
 
-    public String getId() {
-        return id;
+    @ManyToMany
+    @JoinTable(
+            name = "Item",
+            joinColumns = @JoinColumn(name = "compo_id"),
+            inverseJoinColumns = @JoinColumn(name = "cart_id"))
+    private List<Cart> items = new ArrayList<>();
+
+//    @OneToMany(mappedBy = "composant", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<Item> items = new ArrayList<>();
+
+//    public List<Item> getItems() {
+//        return items;
+//    }
+
+    public Integer getCompoId() {
+        return compoId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCompoId(Integer compoId) {
+        this.compoId = compoId;
     }
 
     public String getNom() {

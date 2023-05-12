@@ -1,22 +1,18 @@
 package com.projetapi.lebegue.projetapi.services;
 
-
 import com.projetapi.lebegue.projetapi.model.Composant;
 
 import java.util.List;
-import java.util.Map;
 
 public interface ComposantService {
 
-    public List<Composant> findAll();
+    List<Composant> getAllComposants();
 
-    public Composant findById(String id);
+    Composant getComposantById(Integer compoId);
 
-    public String create(Composant composant);
+    Composant saveComposant(Composant composant);
 
-    void update(String identifiant, Composant composant);
+    void deleteComposantById(Integer compoId);
 
-    void partialUpdate(String identifiant, Map<String, Object> updates);
-
-    void delete(String identifiant);
 }
+

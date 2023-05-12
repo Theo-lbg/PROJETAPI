@@ -1,59 +1,95 @@
 package com.projetapi.lebegue.projetapi.rest;
 
-import java.util.List;
-import java.util.Map;
-
+import com.projetapi.lebegue.projetapi.DAO.CartRepository;
+import com.projetapi.lebegue.projetapi.DAO.ComposantRepository;
+import com.projetapi.lebegue.projetapi.exceptions.RessourceNotFoundException;
 import com.projetapi.lebegue.projetapi.model.Composant;
-import com.projetapi.lebegue.projetapi.services.ComposantService;
-import com.projetapi.lebegue.projetapi.util.Control;
+//import io.swagger.v3.oas.annotations.Operation;
+//import io.swagger.v3.oas.annotations.responses.ApiResponse;
+//import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
 
+import java.util.List;
 
 @RestController
-@RequestMapping("/composant")
+@RequestMapping("/composants")
 public class ComposantController {
 
     @Autowired
-    private ComposantService CompoService;
+    private ComposantRepository composantRepository;
 
-    @GetMapping
-    public List<Composant> findAll() {
-        return CompoService.findAll();
+    // Get All Composants
+//    @Operation(summary = "Get all composants")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Success"),
+//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+//    })
+    @GetMapping()
+    public List<Composant> getAllComposants() {
+        return composantRepository.findAll();
     }
 
+    // Create a new Composant
+//    @Operation(summary = "Create a new composant")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Success"),
+//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+//    })
+    @PostMapping()
+    public Composant createComposant(@RequestBody Composant composant) {
+        return composantRepository.save(composant);
+    }
+
+    // Get a Single Composant
+//    @Operation(summary = "Get a single composant by id")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Success"),
+//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+//    })
     @GetMapping("/{id}")
-    public Composant findById(@PathVariable("id") String identifiant) {
-        Composant reponse = CompoService.findById(identifiant);
-        Control.checkFound(reponse);
-        return reponse;
+    public Composant getComposantById(@PathVariable(value = "id") Integer compoId) {
+        return composantRepository.findById(compoId)
+                .orElseThrow(() -> new RessourceNotFoundException());
     }
 
-    @PostMapping
-    @ResponseStatus(code = HttpStatus.CREATED)
-    public String create(@RequestBody Composant composant) {
-        return CompoService.create(composant);
-    }
-
+    // Update a Composant
     @PutMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.OK)
-    public void update (@PathVariable("id") String identifiant, @RequestBody Composant composant) {
-        Control.checkFound(CompoService.findById(identifiant));
-        CompoService.update(identifiant, composant);
+//    @Operation(summary = "Update composant by id")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Success"),
+//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+//    })
+    public Composant updateComposant(@PathVariable(value = "id") Integer compoId, @RequestBody Composant compoDetails) {
+
+        Composant compo = composantRepository.findById(compoId)
+                .orElseThrow(() -> new RessourceNotFoundException());
+
+        compo.setNom(compoDetails.getNom());
+        compo.setMarque(compoDetails.getMarque());
+        compo.setType(compoDetails.getType());
+        compo.setDescription(compoDetails.getDescription());
+        compo.setPrix(compoDetails.getPrix());
+        compo.setImage(compoDetails.getImage());
+
+        Composant updatedCompo = composantRepository.save(compo);
+        return updatedCompo;
     }
 
-    @PatchMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.OK)
-    public void partialUpdate (@PathVariable("id") String identifiant, @RequestBody Map<String, Object> updates) {
-        Control.checkFound(CompoService.findById(identifiant));
-        CompoService.partialUpdate(identifiant, updates);
-    }
-
+    // Delete a Composant
     @DeleteMapping("/{id}")
-    @ResponseStatus(code = HttpStatus.OK)
-    public void deletebyID(@PathVariable("id") String identifiant) {
-        Control.checkFound(CompoService.findById(identifiant));
-        CompoService.delete(identifiant);
+//    @Operation(summary = "Delete composant by id")
+//    @ApiResponses(value = {
+//            @ApiResponse(responseCode = "200", description = "Success"),
+//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+//    })
+    public ResponseEntity<?> deleteComposant(@PathVariable(value = "id") Integer compoId) {
+        Composant compo = composantRepository.findById(compoId)
+                .orElseThrow(() -> new RessourceNotFoundException());
+
+        composantRepository.delete(compo);
+
+        return ResponseEntity.ok().build();
     }
 }

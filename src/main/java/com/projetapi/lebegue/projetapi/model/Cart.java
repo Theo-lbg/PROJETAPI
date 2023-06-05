@@ -36,9 +36,9 @@ public class Cart {
             inverseJoinColumns = @JoinColumn(name = "compo_id"))
     private List<Composant> items = new ArrayList<>();
 
-//    public int getCartid() {
-//        return cartid;
-//    }
+    public int getCartid() {
+        return cartid;
+    }
 
     public void setCartid(int cartid) {
         this.cartid = cartid;

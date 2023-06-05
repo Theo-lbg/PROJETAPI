@@ -42,11 +42,11 @@ public class Composant {
     private List<Cart> items = new ArrayList<>();
 
 //    @OneToMany(mappedBy = "composant", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<Item> items = new ArrayList<>();
+//    private List<Composant> items = new ArrayList<>();
 
-//    public List<Item> getItems() {
-//        return items;
-//    }
+    public List<Cart> getItems() {
+        return items;
+    }
 
     public Integer getCompoId() {
         return compoId;

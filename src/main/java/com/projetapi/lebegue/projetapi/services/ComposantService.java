@@ -10,7 +10,7 @@ public interface ComposantService {
 
     Composant getComposantById(Integer compoId);
 
-    Composant saveComposant(Composant composant);
+    List<Composant> saveComposant(List<Composant> composant);
 
     void deleteComposantById(Integer compoId);
 

@@ -38,8 +38,8 @@ public class ComposantController {
 //            @ApiResponse(responseCode = "500", description = "Internal Server Error")
 //    })
     @PostMapping()
-    public Composant createComposant(@RequestBody Composant composant) {
-        return composantRepository.save(composant);
+    public List<Composant> createComposant(@RequestBody List<Composant> composant) {
+        return composantRepository.saveAll(composant);
     }
 
     // Get a Single Composant

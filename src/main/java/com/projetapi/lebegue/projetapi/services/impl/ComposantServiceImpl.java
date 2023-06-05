@@ -25,8 +25,8 @@ public class ComposantServiceImpl implements ComposantService {
     }
 
     @Override
-    public Composant saveComposant(Composant composant) {
-        return composantRepository.save(composant);
+    public List<Composant> saveComposant(List<Composant> composant) {
+        return composantRepository.saveAll(composant);
     }
 
     @Override

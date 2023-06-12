@@ -6,6 +6,9 @@ import com.projetapi.lebegue.projetapi.services.UtilisateurService;
 //import io.swagger.v3.oas.annotations.Operation;
 //import io.swagger.v3.oas.annotations.responses.ApiResponse;
 //import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,11 +25,11 @@ public class UtilisateurController {
 
 
     @GetMapping("/{userId}")
-//    @Operation(summary = "Get a single utilisateur by id")
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Success"),
-//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
-//    })
+    @Operation(summary = "Get a single utilisateur by id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     public ResponseEntity<Utilisateur> getUtilisateurById(@PathVariable int userId) {
         Utilisateur utilisateur = utilisateurService.getUtilisateurById(userId);
         if (utilisateur == null) {
@@ -36,22 +39,22 @@ public class UtilisateurController {
     }
 
     @PostMapping
-//    @Operation(summary = "Create a new utilisateur")
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Success"),
-//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
-//    })
+    @Operation(summary = "Create a new utilisateur")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     public ResponseEntity<Utilisateur> addUtilisateur(@RequestBody Utilisateur utilisateur) {
         Utilisateur savedUtilisateur = utilisateurService.addUtilisateur(utilisateur);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUtilisateur);
     }
 
     @PutMapping("/{userId}")
-//    @Operation(summary = "Update utilisateur by id")
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Success"),
-//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
-//    })
+    @Operation(summary = "Update utilisateur by id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     public ResponseEntity<Utilisateur> updateUtilisateur(@PathVariable int userId, @RequestBody Utilisateur utilisateur) {
         Utilisateur updatedUtilisateur = utilisateurService.updateUtilisateur(userId, utilisateur);
         if (updatedUtilisateur == null) {
@@ -61,11 +64,11 @@ public class UtilisateurController {
     }
 
     @DeleteMapping("/{userId}")
-//    @Operation(summary = "Delete utilisateur by id")
-//    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Success"),
-//            @ApiResponse(responseCode = "500", description = "Internal Server Error")
-//    })
+    @Operation(summary = "Delete utilisateur by id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success"),
+            @ApiResponse(responseCode = "500", description = "Internal Server Error")
+    })
     public ResponseEntity<Void> deleteUtilisateur(@PathVariable int userId) {
         Utilisateur utilisateur = utilisateurService.getUtilisateurById(userId);
         if (utilisateur == null) {

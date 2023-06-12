@@ -48,6 +48,7 @@ public class UtilisateurServiceImpl implements UtilisateurService {
         utilisateurToUpdate.setNom(utilisateur.getNom());
         utilisateurToUpdate.setPrenom(utilisateur.getPrenom());
         utilisateurToUpdate.setAdresse(utilisateur.getAdresse());
+        utilisateurToUpdate.setCart(utilisateur.getCart());
         return utilisateurRepository.save(utilisateurToUpdate);
     }
 

@@ -17,6 +17,8 @@ public class Utilisateur {
     private String prenom;
     @Column(name = "adresse")
     private String adresse;
+    @Column(name = "email")
+    private String email;
 
     @OneToOne(targetEntity = Cart.class, fetch = FetchType.LAZY)
     private Cart cart;
@@ -44,6 +46,14 @@ public class Utilisateur {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPrenom() {

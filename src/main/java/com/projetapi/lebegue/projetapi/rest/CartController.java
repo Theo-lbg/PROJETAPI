@@ -52,13 +52,13 @@ public class CartController {
 
     // Create a new cart
     @PostMapping
-    public ResponseEntity<Cart> createCart(@RequestBody SaveCart cart) {
+    public ResponseEntity<Cart> createCart(@RequestParam (value="name") String name, @RequestParam (value="user_id") int user_id) {
+        Utilisateur user = utilisateurRepository.getReferenceById(user_id);
         Cart savedCart = new Cart();
-        savedCart.setName(cart.getName());
-        savedCart.setUser(utilisateurRepository.getById(cart.getUser_id()));
-
-        Utilisateur user = utilisateurRepository.getById(cart.getUser_id());
-        log.debug("user {}", user);
+        savedCart.setName(name);
+        savedCart.setUser(user);
+        log.info("cart {}", savedCart);
+        log.info("user {}", user_id);
         if (user == null) {
             throw new RessourceNotFoundException();
         }

@@ -57,8 +57,6 @@ public class CartController {
         Cart savedCart = new Cart();
         savedCart.setName(name);
         savedCart.setUser(user);
-        log.info("cart {}", savedCart);
-        log.info("user {}", user_id);
         if (user == null) {
             throw new RessourceNotFoundException();
         }

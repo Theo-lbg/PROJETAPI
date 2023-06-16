@@ -1,0 +1,246 @@
+[
+    {
+        "compoId": 1,
+        "nom": "Intel Core i9-11900K",
+        "marque": "Intel",
+        "type": "Processeur",
+        "description": "Processeur Intel de 11eme generation, debloque pour l'overclocking",
+        "prix": "609.99",
+        "image": "https://cdn-reichelt.de/bilder/web/xxl_ws/E200/BX8070811900K_01.png"
+    },
+    {
+        "compoId": 2,
+        "nom": "AMD Ryzen 5 5600X",
+        "marque": "AMD",
+        "type": "Processeur",
+        "description": "Processeur AMD Ryzen de 5eme generation, compatible PCIe 4.0",
+        "prix": "319.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/3ef757133d38ac40afe75da691ba7d60.256p.jpg"
+    },
+    {
+        "compoId": 3,
+        "nom": "Intel Pentium Gold G6400",
+        "marque": "Intel",
+        "type": "Processeur",
+        "description": "Processeur Intel d entree de gamme, compatible avec les cartes meres LGA 1200",
+        "prix": "79.99",
+        "image": "https://www.pure-gaming.fr/252954-large_default/pentium-gold-g6400-4-0-ghz.jpg"
+    },
+    {
+        "compoId": 4,
+        "nom": "Corsair RM850x",
+        "marque": "Corsair",
+        "type": "Alimentation",
+        "description": "Alimentation modulaire 850 W, certifiee 80+ Gold pour une efficacite maximale",
+        "prix": "149.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/4f19c6453ce4ebe67091e6d9735f3a19.256p.jpg"
+    },
+    {
+        "compoId": 5,
+        "nom": "EVGA SuperNOVA 750 G5",
+        "marque": "EVGA",
+        "type": "Alimentation",
+        "description": "Alimentation de qualite superieure avec une certification 80+ Gold pour une efficacite energetique elevee et une modularite pour une installation facile",
+        "prix": "129.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/2962078ca09cdf6f4c8e9f99c01cfe4a.256p.jpg"
+    },
+    {
+        "compoId": 6,
+        "nom": "Seasonic S12III 500 SSR-500GB3",
+        "marque": "Seasonic",
+        "type": "Alimentation",
+        "description": "Non modulaire 500W, certifiee 80+ Bronze pour une efficacite decente",
+        "prix": "59.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/1131d67fb91696a9538861a72c9b4d36.256p.jpg"
+    },
+    {
+        "compoId": 7,
+        "nom": "MSI B450 Tomahawk MAX",
+        "marque": "MSI",
+        "type": "Cartemere",
+        "description": "Carte mere pour processeur AMD Ryzen, compatible DDR4 jusqu'à 4133 MHz",
+        "prix": "119.99",
+        "image": "https://asset.msi.com/resize/image/global/product/product_1_20200806161944_5f2bbd20c4441.png62405b38c58fe0f07fcef2367d8a9ba1/600.png"
+    },
+    {
+        "compoId": 8,
+        "nom": "Asus ROG Strix Z590-E Gaming WiFi",
+        "marque": "Asus",
+        "type": "Cartemere",
+        "description": "Carte mere pour processeur Intel de 10ème et 11ème generation, compatible Wi-Fi 6 et Bluetooth 5.2",
+        "prix": "399.99",
+        "image": "https://media.ldlc.com/r1600/ld/products/00/05/79/39/LD0005793975_1.jpg"
+    },
+    {
+        "compoId": 9,
+        "nom": "Gigabyte A520M DS3H",
+        "marque": "Gigabyte",
+        "type": "Cartemere",
+        "description": "Carte mere pour processeur AMD Ryzen, compatible avec les processeurs de 3ème generation",
+        "prix": "69.99",
+        "image": "https://media.ldlc.com/r1600/ld/products/00/05/73/59/LD0005735986_1.jpg"
+    },
+    {
+        "compoId": 10,
+        "nom": "G.Skill Trident Z RGB 16 Go (2x 8 Go) DDR4 3200 MHz CL16",
+        "marque": "G.Skill",
+        "type": "RAM",
+        "description": "Kit Dual Channel RAM DDR4 PC4-25600 - F4-3200C16D-16GTZR",
+        "prix": "119.99",
+        "image": "https://m.media-amazon.com/images/I/41UyfTQGqiL.jpg"
+    },
+    {
+        "compoId": 11,
+        "nom": "Corsair Vengeance LPX Black 16 Go (2x 8 Go) DDR4 3200 MHz CL16",
+        "marque": "Corsair",
+        "type": "RAM",
+        "description": "Kit Dual Channel RAM DDR4 PC4-25600 - CMK16GX4M2B3200C16",
+        "prix": "109.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/835ab3efad1be13bbe53beef3e3c6f96.256p.jpg"
+    },
+    {
+        "compoId": 12,
+        "nom": "Crucial Ballistix RGB 16 Go (2x 8 Go) DDR4 3600 MHz CL16",
+        "marque": "Crucial",
+        "type": "RAM",
+        "description": "Kit Dual Channel RAM DDR4 PC4-28800 - BL2K8G36C16U4BL",
+        "prix": "129.99",
+        "image": "https://pcpartpicker.com/product/BxTzK8/crucial-ballistix-16-gb-2-x-8-gb-ddr4-3200-memory-bl2k8g32c16u4b"
+    },
+    {
+        "compoId": 13,
+        "nom": "Samsung 970 EVO Plus 500 Go",
+        "marque": "Samsung",
+        "type": "SSD",
+        "description": "SSD M.2 PCIe NVMe 3.0 x4 - Memoire TLC 3D NAND - Controleur Samsung Phoenix - Lecture max. 3500 Mo/s - Ecriture max. 3200 Mo/s - Memoire cache 512 Mo LPDDR4 - Samsung Magician - Garantie 5 ans",
+        "prix": "99.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/25a1bf52562913032cce0b7a71b9e323.256p.jpg"
+    },
+    {
+        "compoId": 14,
+        "nom": "Nvidia GeForce RTX 3090",
+        "marque": "Nvidia",
+        "type": "GPU",
+        "description": "Carte graphique haut de gamme pour les jeux videox et la creation de contenu, compatible avec le ray tracing",
+        "prix": "1499.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/3c414a5f8283c0dee49a1c682f26282d.256p.jpg"
+    },
+    {
+        "compoId": 15,
+        "nom": "AMD Radeon RX 6900 XT",
+        "marque": "AMD",
+        "type": "GPU",
+        "description": "Carte graphique haut de gamme pour les jeux videox et la creation de contenu",
+        "prix": "1299.99",
+        "image": "https://m.media-amazon.com/images/I/4178P0YUeJL.jpg"
+    },
+    {
+        "compoId": 16,
+        "nom": "Nvidia GeForce GTX 1650 Super",
+        "marque": "Nvidia",
+        "type": "GPU",
+        "description": "Carte graphique d entree de gamme pour les jeux videox, offrant de bonnes performances a un prix abordable",
+        "prix": "189.99",
+        "image": "https://pcandco.fr/226363-large_default/gigabyte-gv-n165soc-4gd-carte-graphique-nvidia-geforce-gtx-1650-super-4-go-gddr6.jpg"
+    },
+    {
+        "compoId": 17,
+        "nom": "Noctua NH-D15",
+        "marque": "Noctua",
+        "type": "Ventirad",
+        "description": "Ventirad double tour haut de gamme pour un refroidissement optimal de votre processeur",
+        "prix": "99.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/ca16d42d3e187f96c728c09183df14a7.med.256p.jpg"
+    },
+    {
+        "compoId": 18,
+        "nom": "Be Quiet! Dark Rock Pro 4",
+        "marque": "Be Quiet!",
+        "type": "Ventirad",
+        "description": "Ventirad double tour pour un refroiding efficace et silencieux de votre processeur",
+        "prix": "89.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/8ab57dc3c0eb346c72ef7a2405e31227.256p.jpg"
+    },
+    {
+        "compoId": 19,
+        "nom": "Cooler Master Hyper 212 RGB",
+        "marque": "Cooler Master",
+        "type": "Ventirad",
+        "description": "Ventirad simple tour pour un refroiding efficace et silencieux de votre processeur",
+        "prix": "39.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/16dca5ad82a279a9232b0cbcb6ed71bf.256p.jpg"
+    },
+    {
+        "compoId": 20,
+        "nom": "Be Quiet! Pure Base 500DX",
+        "marque":"Be Quiet!",
+        "type": "Boitier",
+        "description": "Boitier moyen tour ATX avec panneau lateral en verre trempe",
+        "prix": "99.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/f0f421e3fc3867493483981e8171cdc6.256p.jpg"
+    },
+    {
+        "compoId": 21,
+        "nom":"Corsair 4000D Airflow",
+        "marque": "Corsair",
+        "type": "Boitier",
+        "description": "Boitier moyen tour ATX avec panneau latéral en verre trempe",
+        "prix": "89.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/bc6e987da3fe22c616898d1d7fa3d227.256p.jpg"
+    },
+    {
+        "compoId": 22,
+        "nom": "NZXT H510",
+        "marque":"NZXT",
+        "type": "Boitier",
+        "description": "Boitier moyen tour ATX avec panneau lateral en verre trempe",
+        "prix":"https://cdna.pcpartpicker.com/static/forever/images/product/e323af9a28f2a3a80700a2db3998fb09.256p.jpgg",
+        "image": "79.99"
+    },
+    {
+        "compoId": 23,
+        "nom":"Corsair Hydro Series H150i",
+        "marque": "Corsair",
+        "type": "Watercooling",
+        "description":"Systeme de refroidissement liquide tout-en-un avec une pompe à haute efficacite et un radiateur de 360 mm pour un refroidissement efficace de votre processeur",
+        "prix": "199.99",
+        "image": "https://media.ldlc.com/r1600/ld/products/00/04/71/46/LD0004714629_2.jpg"
+    },
+    {
+        "compoId": 24,
+        "nom": "NZXT Kraken Z73",
+        "marque": "NZXT",
+        "type": "Watercooling",
+        "description": "Systeme de refroidissement liquide tout-en-un avec un ecran LCD personnalisable et un radiateur de 360 mm pour un refroidissement efficace de votre processeur",
+        "prix": "279.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/26b8fd4167a7e43f82d73cae4c26d565.256p.jpg"
+    },
+    {
+        "compoId": 25,
+        "nom": "EKWB EK-Classic Kit P240",
+        "marque": "EKWB" ,
+        "type": "Watercooling",
+        "description":"Kit de refroidissement liquide personnalise avec un radiateur de 240 mm, une pompe a haut debit et des tuyaux en PVC de haute qualite pour un refroidissement efficace de votre processeur",
+        "prix": "255.99",
+        "image": "https://www.ekwb.com/shop/media/catalog/product/cache/1/image/x800/17f82f742ffe127f42dca9de82fb58b1/p/-/p-0213_ekint_ek-classic-kit_flat-lay_p240-d-rgb_1.jpg" 
+    },
+    {
+        "compoId": 26,
+        "nom": "Samsung 980 Pro 2 TB ",
+        "marque": "Samsung",
+        "type": "SSD",
+        "description": "M.2-2280 PCIe 4.0 X4 NVME Solid State Drive - Memoire TLC 3D NAND - Controleur Samsung Phoenix - Lecture max. 3500 Mo/s - Ecriture max. 3200 Mo/s - Memoire cache 512 Mo LPDDR4 - Samsung Magician - Garantie 5 ans",
+        "prix": "123.23",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/3b2a91588d1a28bfa1b0184fb7f1c0a1.256p.jpg"
+    },
+    {
+        "compoId": 27,
+        "nom": "Western Digital Black SN770 1 TB",
+        "marque": "Wester Digital",
+        "type": "SSD",
+        "description": "M.2-2280 PCIe 4.0 X4 NVME Solid State Drive - Memoire TLC 3D NAND  - Lecture max. 3500 Mo/s - Ecriture max. 3200 Mo/s - Memoire cache 512 Mo LPDDR4 - Garantie 5 ans",
+        "prix": "50.99",
+        "image": "https://cdna.pcpartpicker.com/static/forever/images/product/8fcb88c883df1ee3563538df639a08c8.256p.jpg"
+    }
+    
+]

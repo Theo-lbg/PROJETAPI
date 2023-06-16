@@ -30,6 +30,9 @@ Instructions sur la façon d'utiliser le projet, comment l'exécuter et comment 
 Contribuer
 Instructions sur la façon de contribuer au projet, sur les règles de contribution et sur les processus de pull request.
 
+Build Docker
+Pour builder le docker faire la commande docker build -f Dockerfile -t projetapi .
+Exécuter la commande docker run -p 8080:8080 projetapi
 Auteurs
 Lebègue Théo - Licence Pro dév web et mobile
 License

@@ -1,5 +1,6 @@
 package com.projetapi.lebegue.projetapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 
@@ -19,6 +20,7 @@ public class Cart {
     private String name;
 
     @OneToOne(targetEntity = Utilisateur.class, fetch = FetchType.LAZY, optional = false)
+    @JsonBackReference
     private Utilisateur user;
 
     public List<Composant> getItems() {

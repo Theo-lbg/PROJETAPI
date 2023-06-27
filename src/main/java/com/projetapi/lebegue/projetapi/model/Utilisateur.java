@@ -1,5 +1,6 @@
 package com.projetapi.lebegue.projetapi.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,6 +22,7 @@ public class Utilisateur {
     private String email;
 
     @OneToOne(targetEntity = Cart.class, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private Cart cart;
 
     public Cart getCart() {

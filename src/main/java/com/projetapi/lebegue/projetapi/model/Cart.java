@@ -20,7 +20,6 @@ public class Cart {
     private String name;
 
     @OneToOne(targetEntity = Utilisateur.class, fetch = FetchType.LAZY, optional = false)
-    @JsonBackReference
     private Utilisateur user;
 
     public List<Composant> getItems() {

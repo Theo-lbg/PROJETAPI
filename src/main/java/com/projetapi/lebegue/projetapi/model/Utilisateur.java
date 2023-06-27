@@ -22,7 +22,6 @@ public class Utilisateur {
     private String email;
 
     @OneToOne(targetEntity = Cart.class, fetch = FetchType.LAZY)
-    @JsonManagedReference
     private Cart cart;
 
     public Cart getCart() {
